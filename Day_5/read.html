@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="read.css">
+    <title>StudyMe</title>
+</head>
+<body>
+
+  <div="top">
+    <header style="display: flex;  background-color: #333;  padding-left: 20px; padding-bottom: 9px; justify-content: center;">
+        <h1 style="color: white;">ReadMe</h1>
+  <h3 class="button">
+    <button class="btn2" id="create" onclick="sigin()">Create Account</button></h3> </header></div>
+<div class="landing">
+  <div class="content">
+    <h1 class="big">The more you read, the more you know</h1>
+    <p> How reading expands your world and sharpens your mind.</p><br>
+    <button class="btn1" onclick="sigin()">Sign In</button>
+</div>
+
+ <div class="container">
+<div style="display: none;"  id="signin">
+        <section>
+           
+  <div class="tabs">
+    <div class="tab active" id="signInTab">Sign In</div>
+    <div class="tab" id="signUpTab">Sign Up</div>
+  </div>
+  <form id="signInForm" class="active">
+    <input type="text" placeholder="Full name" required />
+    <input type="password" placeholder="Password" required />
+    
+    <div class="links">
+      <a href="#">Forgot password?</a>
+      
+      <a href="#" id="switchToSignUp">No account yet?</a>
+    </div>
+    <button type="submit" onclick="go()">Login</button>
+  </form>
+
+  <form id="signUpForm">
+    <input type="text" placeholder="Full Name" required />
+    <input type="email" placeholder="Email" required />
+    <input type="password" placeholder="Password" required />
+    <div class="links">
+      <a href="#" id="switchToSignIn">Already have an account?</a>
+    </div>
+    <button type="submit" onclick="go()">Create Account</button>
+  </form>
+</div>
+        </section>
+    </div></div>
+
+    <section>
+
+    </section>
+
+        <div id="loading" style="display:None; font-weight: bold; margin-top:10px; background:linear-gradient(30deg, orange, rgb(179, 132, 45), rgb(197, 153, 73)); width: 15%; color: white;">
+          <img src="/loading.gif"/><br><h3 style="text-shadow: 5px 2px 4px rgba(0,0,0,0.5);">Wait a Minute....</h3></div>
+
+
+<footer style="text-align: center; background-color: #333; padding-bottom: 10px; padding-top: 5px; margin-bottom: 0; color: white;">
+    Contact Us | Privacy | Terms | Follow Us
+</footer>
+
+
+
+    <script src="read.js"></script>
+</body>
+</html>

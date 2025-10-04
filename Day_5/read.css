@@ -1,0 +1,151 @@
+* {
+      margin: 0;
+       padding: 0; 
+       box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      width: 100%;
+      
+}
+
+body {
+      background: url('bg.jpeg') no-repeat center center/cover;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      background-attachment: fixed;
+      overflow: hidden;
+      font-size: larger;
+     
+}
+
+.landing{
+        text-align: center;
+        margin-top: 10%;
+        font-size: 25px;
+        padding: 21px;
+}
+    
+.btn1{
+        padding: 10px;
+        width: 15%;
+        background-color: rgb(255, 166, 0);
+        color: white;
+        border: 1px solid #333;
+        border-radius: 4px;
+}
+
+footer{
+    margin-top: 11.6%;
+}
+
+.big{
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn2{
+    border: 1px solid orange;
+    background: none;
+    width: 150px;
+    padding: 8px;
+    margin-top: 10px;
+    float: right;
+    margin-right: 20px;
+    color: white;
+    border-radius: 4px;
+}
+
+
+#signin {
+      background:linear-gradient(30deg, orange, rgb(179, 132, 45), rgb(197, 153, 73));
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      color: white;
+      width: 30vw;
+      height: 60vh;
+      position: fixed;
+      top: 0;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 10%;
+      z-index: 1000;
+      padding-top: 0;
+      margin-left: 35%;
+      font-size: larger;
+}
+
+.tabs {
+      display: flex;
+      margin-bottom: 1.5rem;
+}
+
+.tab {
+      flex: 1;
+      text-align: center;
+      padding: 0.5rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      font-weight: bold;
+}
+
+.tab.active {
+      border-color: white;
+}
+
+form {
+      display: none;
+      flex-direction: column;
+}
+
+form.active {
+      display: flex;
+}
+
+input {
+      margin-bottom: 1rem;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 5px;
+}
+
+.links {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+}
+
+button {
+      margin-top: 1rem;
+      padding: 0.7rem;
+      background: #ffffff33;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+}
+
+button:hover {
+      background: #ffffff55;
+}
+
+
+
+.content.blur{
+    filter: blur(10px);
+    transition: filter 0.3s ease;
+}
+
+#loading{
+    position: fixed;
+    text-align: center;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top:10px;
+}

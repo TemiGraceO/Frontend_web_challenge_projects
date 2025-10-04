@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: white;
+}
+
+header{
+    display: flex;
+    gap: 50%;
+    background-color: rgb(77, 76, 76);
+    color: white;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: orangered;
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: rgb(240, 113, 67);
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 30%;
+}
+
+.btn1{
+    float: right;
+    color: white;
+    padding: 15px;
+    width: 7%;
+    background-color: orangered;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.big{
+    font-size: 50px;
+    margin-top: 12%;
+    padding-left: 7%;
+    color: white;
+}
+
+.btn2{
+    color: white;
+    padding: 15px;
+    width: 15%;
+    margin-left:7% ;
+    background-color: orangered;
+}
+
+.land{
+    background:rgb(45, 44, 44);
+    padding-bottom: 8%;
+}
+
+.products{
+    background:rgb(45, 44, 44);
+}
+
+.hori{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-left: 4%;
+    padding-bottom: 4%;
+}
+
+.hori img{
+    width: 20%;
+    border: 2px solid orangered;
+    border-radius: 30px;
+    
+}
+
+.pro{
+    transition: transform 0.3s ease;
+}
+.pro:hover{
+    transform: scale(1.1);
+}
+
+.contact{
+    background-color:rgb(56, 55, 55);
+    width: 100%;
+    padding-bottom: 3%;
+}
+
+.contact1{
+    display: flex;
+    gap: 30%;
+    margin-left: 20%;
+}
+
+input{
+    margin: 5px;
+    width: 450%;
+    padding: 10px;
+    border: 1px solid orangered;
+    border-radius: 8px;
+}
+
+.btn3{
+    background-color: orangered;
+    width: 100%;
+    padding: 10px;
+    margin-left: 60px;
+    color: white;
+}
+
+.footer{
+    background:rgb(45, 44, 44);
+    text-align: center;
+    padding: 30px;
+}
+
+.image-container{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.9s ease-in-out;
+}
+
+.image-container.show{
+    opacity: 1;
+    transform: translateX(0);
+}

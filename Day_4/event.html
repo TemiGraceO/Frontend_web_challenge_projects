@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinner Registration</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+
+    <div class="all">
+        <header>
+            <h1 style="font-family: 'Courier New', Courier, monospace;">ReserveMe</h1>
+        </header></div>
+    <div class="main">
+        <div class="info">
+            <h3>Reserve your perfect Evening</h3>
+            <hr><br>
+            <p>DATE: Saturday, October 2nd, 2026</p>
+            <p>TIME: 7:00pm Prompt</p>
+            <p>VENUE: Blue Roof, ABU, Zaria</p>
+            <button>Preview Ticket</button>
+        </div>
+
+
+    <div class="form">
+        <h2>Generate Ticket Here</h2>
+        <form enctype="multipart/form-data" >
+            <input type="text" placeholder="Full name" required /><br>
+            <input type="email" placeholder="Email" required /><br>
+            <select id="tickettype" required style="margin-left: 2px;">
+                <option>Ticket Type</option>
+                <option>VIP - Single [#15,0000]</option>
+                <option>VIP - Table for Two [#25,0000]</option>
+                <option>Regular - Single [#10,0000]</option>
+                <option>Regular - Table for Two [#15,0000]</option>
+            </select>
+            <div class="account">
+            <h3>Send payment to:</h3>
+            <p>Bank Account: 9160262280</p>
+            <p>Bank Name: Opay</p></div>
+            <p>Upload Payment Receipt</p>
+           <input type="file" id="image" name="image" required>
+           <button type="button" onclick="showTicket()" id="getTicketBtn">Reserve</button></form>
+</div>
+
+<div class="rule">
+    <h2 style="color: rgb(0, 132, 255);">Entry by Reservation Only</h2><br>
+    <img src="qr.PNG"/>
+</div></div>
+
+    <div id="ticket"><div>
+        <h1 style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Your Ticket</h1>
+        <p><span id="ticketName"></span></p></div><hr style="height: 30px;"><hr style="height: 30px; transform: rotate(150deg);">
+        <p>Ticket Type:<br> <span id="ticketTypeDisplay"></span></p>
+
+        <a href="ticket.pdf" download><button  id="ticket-btn" >Download Ticket </button></a>
+    </div>
+
+    <div id="loading" style="display:None; font-weight: bold; margin-top:10px;"><img src="page_loader.gif" width="40%"><br><p>Confirming Your Payment</p></div>
+    <script src="event.js"></script>
+</body>
+</html>
