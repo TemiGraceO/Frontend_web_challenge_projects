@@ -1,0 +1,1 @@
+The task for today is to create a stacked page with only called divs visible. The rest remains invincible till called

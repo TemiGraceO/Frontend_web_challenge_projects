@@ -1,0 +1,1 @@
+The task for today is to create an event ticket generator

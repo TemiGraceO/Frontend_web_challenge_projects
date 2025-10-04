@@ -1,0 +1,1 @@
+THe task for today is to create a landing page for a fashion website
