@@ -51,7 +51,7 @@ body{
 
 .right1{
     display: flex;
-    margin-left: -10%;
+    margin-left: -6%;
 }
 
 .ok{
@@ -114,23 +114,14 @@ img{
     overflow: hidden;
 }
 
-.slides{
-    width: unset;
-    position: absolute;
-    transition: opacity 1s ease-in-out;
-    opacity: 0;
-    transform: translateX(100%);
+
+#wrapper{
+    display: flex;
+    transition: transform 1s ease;
 }
 
-.slides.active{
-    opacity: 1;
-    z-index: 1;
-}
-
-.slides.prev{
-    opacity: 0;
-    transform: translateX(-100);
-    z-index: 0;
+.container{
+    overflow: hidden;
 }
 
 .footer{
