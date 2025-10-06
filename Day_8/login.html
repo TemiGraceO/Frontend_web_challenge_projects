@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Galaxy Gadget - Login/Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500&display=swap');
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+            color: #fff;
+            background: linear-gradient(120deg, #0a0a23 0%, #23234a 100%);
+            overflow: hidden;
+        }
+        /* Galaxy background with nebula and stars */
+        .galaxy-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            background: radial-gradient(ellipse at 70% 30%, #3a3a7c 0%, #181836 70%, #0a0a23 100%);
+        }
+        .nebula {
+            position: absolute;
+            width: 700px; height: 700px;
+            left: 60vw; top: 10vh;
+            background: radial-gradient(circle at 60% 40%, #7ecfff55 0%, #4e54c800 80%);
+            filter: blur(60px);
+            opacity: 0.7;
+            z-index: 1;
+        }
+        .stars {
+            position: absolute;
+            width: 100vw; height: 100vh;
+            top: 0; left: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+        /* Star field using box-shadow for performance */
+        .stars::before {
+            content: '';
+            position: absolute;
+            width: 2px; height: 2px;
+            top: 0; left: 0;
+            box-shadow:
+                100vw 10vh #fff, 20vw 80vh #b6e0fe, 60vw 60vh #fff,
+                80vw 30vh #7ecfff, 10vw 50vh #fff, 90vw 90vh #b6e0fe,
+                40vw 20vh #fff, 70vw 70vh #7ecfff, 30vw 10vh #fff,
+                50vw 90vh #b6e0fe, 85vw 15vh #fff, 15vw 85vh #7ecfff,
+                25vw 60vh #fff, 65vw 35vh #b6e0fe, 35vw 75vh #fff;
+        }
+        .shooting-star {
+            position: absolute;
+            width: 120px; height: 2px;
+            background: linear-gradient(90deg, #fff 0%, #7ecfff00 100%);
+            opacity: 0.7;
+            border-radius: 2px;
+            top: 20vh; left: -150px;
+            animation: shooting 4s linear infinite;
+            z-index: 3;
+        }
+        @keyframes shooting {
+            0% { left: -150px; top: 20vh; opacity: 0; }
+            10% { opacity: 1; }
+            80% { left: 110vw; top: 25vh; opacity: 1; }
+            100% { left: 110vw; top: 25vh; opacity: 0; }
+        }
+        .container {
+            position: relative;
+            z-index: 10;
+            background: rgba(24, 24, 54, 0.96);
+            box-shadow: 0 8px 40px 0 rgba(30,40,120,0.35), 0 1.5px 8px 0 rgba(0,0,0,0.18);
+            border-radius: 22px;
+            padding: 2.7rem 2.7rem 2.2rem 2.7rem;
+            width: 390px;
+            margin: 7vh auto 0 auto;
+            backdrop-filter: blur(3px);
+            border: 1.5px solid #4e54c8;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.3rem;
+        }
+        .logo img {
+            width: 54px;
+            height: 54px;
+            margin-right: 0.8rem;
+            filter: drop-shadow(0 0 12px #7ecfff88);
+        }
+        .logo span {
+            font-family: 'Orbitron', Arial, sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            color: #7ecfff;
+            text-shadow: 0 2px 16px #1a1a40;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1.7rem;
+            font-size: 1.45rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            color: #e0e7ff;
+            font-family: 'Orbitron', Arial, sans-serif;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            padding: 0.9rem 1.1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            background: #23234a;
+            color: #fff;
+            box-shadow: 0 1px 4px 0 rgba(30,40,120,0.08);
+            outline: none;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        input:focus {
+            background: #2e2e5e;
+            box-shadow: 0 0 0 2px #7ecfff55;
+        }
+        button {
+            padding: 0.95rem;
+            background: linear-gradient(90deg, #4e54c8 0%, #7ecfff 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.12rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 0.2rem;
+            box-shadow: 0 2px 12px 0 #7ecfff33;
+            transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+            font-family: 'Orbitron', Arial, sans-serif;
+            letter-spacing: 1px;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #3b3f99 0%, #6a6fd7 100%);
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 4px 20px 0 #7ecfff55;
+        }
+        .toggle-link {
+            color: #7ecfff;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            margin-top: 1.3rem;
+            font-size: 1.03rem;
+            text-decoration: underline;
+            transition: color 0.2s;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        .toggle-link:hover {
+            color: #b6e0fe;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 1rem;
+            color: #7ecfff;
+            opacity: 0.7;
+            letter-spacing: 0.7px;
+            font-family: 'Orbitron', Arial, sans-serif;
+        }
+        @media (max-width: 500px) {
+            .container {
+                width: 97vw;
+                padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+            }
+            .logo span {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="galaxy-bg"></div>
+    <div class="nebula"></div>
+    <div class="stars"></div>
+    <div class="shooting-star"></div>
+    <div class="container">
+        <div class="logo">
+            <img src="https://img.icons8.com/color/96/galaxy.png" alt="Galaxy Gadget Logo">
+            <span>Galaxy Gadget</span>
+        </div>
+        <h2 id="form-title">Login to your account</h2>
+        <form id="login-form" action="galaxy.html" method="get" autocomplete="on">
+            <input type="text" name="username" placeholder="Username" required autocomplete="username">
+            <input type="password" name="password" placeholder="Password" required autocomplete="current-password">
+            <button type="submit">Login</button>
+        </form>
+        <form id="signup-form" action="galaxy.html" method="get" style="display:none;" autocomplete="on">
+            <input type="text" name="username" placeholder="Username" required autocomplete="username">
+            <input type="email" name="email" placeholder="Email" required autocomplete="email">
+            <input type="password" name="password" placeholder="Password" required autocomplete="new-password">
+            <button type="submit">Sign Up</button>
+        </form>
+        <span class="toggle-link" id="toggle-link">Don't have an account? <b>Sign Up</b></span>
+        <div class="footer">
+            &copy; 2024 Galaxy Gadget. Explore the universe of innovation.
+        </div>
+    </div>
+    <script>
+        // Toggle login/signup forms
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const toggleLink = document.getElementById('toggle-link');
+        const formTitle = document.getElementById('form-title');
+
+        toggleLink.onclick = function() {
+            if (loginForm.style.display !== 'none') {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'flex';
+                formTitle.textContent = 'Create your Galaxy Gadget account';
+                toggleLink.innerHTML = 'Already have an account? <b>Login</b>';
+            } else {
+                loginForm.style.display = 'flex';
+                signupForm.style.display = 'none';
+                formTitle.textContent = 'Login to your account';
+                toggleLink.innerHTML = "Don't have an account? <b>Sign Up</b>";
+            }
+        };
+
+        // Animate shooting star at random intervals
+        function animateShootingStar() {
+            const star = document.querySelector('.shooting-star');
+            star.style.top = (Math.random() * 60 + 10) + 'vh';
+            star.style.animation = 'none';
+            // Force reflow
+            void star.offsetWidth;
+            star.style.animation = '';
+        }
+        setInterval(animateShootingStar, 5000);
+    </script>
+</body>
+</html>
