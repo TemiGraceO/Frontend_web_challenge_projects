@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('images/bg.jpeg');
+    background-size: cover;
+    justify-self: center;
+    margin-top: 10%;
+}
+
+h1{
+    margin-left: 7%;
+    font-size: 400%;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(30deg,rgb(255, 255, 255),aqua,blue,rgb(76, 0, 255));
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.added{
+    display: flex;
+    margin-left: 40%;
+    gap: 20%;
+    margin-top: 3%;
+}
+
+.fist{
+    animation: jump 1s infinite ease-in-out;
+}
+ @keyframes jump {
+      0%, 100% {
+        transform: translateY(0); /* Start and end at the original position */
+      }
+      50% {
+        transform: translateY(-50px); /* Move up by 50px */
+    }
+}
+
+.paper{
+    animation: side 1s infinite ease-in-out;
+}
+ @keyframes side {
+      0%, 100% {
+        transform: translatex(0); /* Start and end at the original position */
+      }
+      50% {
+        transform: translatex(-50px); /* Move up by 50px */
+    }
+}
+
+.scissors{
+    animation: tilt 1s infinite ease-in-out;
+}
+ @keyframes tilt {
+      0%,100%{
+        transform: rotate(90deg); /* Start and end at the original position */
+      }
+    50%{
+        transform: rotate(0deg); /* Start and end at the original position */
+    }
+}
+
+.btn{
+    background-color: orange; 
+    border-radius: 2px; 
+    width: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: white; 
+    margin-left: 30%;
+    border-radius: 12%;
+}
+
+.btn:hover{
+    background-color: rgb(255, 140, 0);
+    cursor: pointer;
+}
