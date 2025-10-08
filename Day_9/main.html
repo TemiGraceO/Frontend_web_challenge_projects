@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body style="margin-top: 15%;"><div class="img">
+     <img src="images/fist.png" alt="rock" width="200px" height="200px" class="fist" onclick="play('rock')" id="choice">
+    <img src="images/paper.png" alt="paper" width="250px" class="paper" onclick="play('paper')" id="choice">
+    <img src="images/scissors.png" alt="scissors" width="200px" height="200px" class="scissors" onclick="play('scissors')" id="choice"><br>
+</div>
+    <div class="side">
+        <h3>How To Play</h3><br>
+        <ol style="list-style: none;">
+            <li>Choose what to play</li>
+            <li>Computer Plays too</li>
+        </ol>
+    </div>
+
+    <div class="score">
+        <h3  id="score">Player: 0 | Computer: 0</h3>
+        <p id="result">Make your move!</p>
+    </div>
+
+    <footer>Copyright Gracie</footer>
+    <script src="main.js"></script>
+</body>
+</html>

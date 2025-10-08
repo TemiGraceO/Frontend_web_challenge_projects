@@ -7,7 +7,9 @@ body{
     background-image: url('images/bg.jpeg');
     background-size: cover;
     justify-self: center;
-    margin-top: 10%;
+    margin-top: 5%;
+    overflow-y: hidden;
+    font-family:Bahnschrift;
 }
 
 h1{
@@ -67,15 +69,42 @@ h1{
 .btn{
     background-color: orange; 
     border-radius: 2px; 
-    width: 40%;
+    width: 20%;
     padding-top: 2%;
     padding-bottom: 2%;
     color: white; 
-    margin-left: 30%;
+    margin-left: 40%;
     border-radius: 12%;
 }
 
 .btn:hover{
+    background-color: rgb(255, 140, 0);
+    cursor: pointer;
+}
+
+.question:hover{
+    cursor: pointer;
+}
+.hidden{
+    background:url('images/bg.jpeg');
+    color: white;
+    padding-left:6%;
+    padding-right: 6%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-top: -15%;
+    border-radius: 4%;
+}
+
+#closenote{
+    margin-left: 30%;
+    background-color: orange;
+    width: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: white;
+}
+#closenote:hover{
     background-color: rgb(255, 140, 0);
     cursor: pointer;
 }
