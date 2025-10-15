@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    gap: 50%;
+}
+
+ul{
+    display: flex;
+    gap: 30%;
+    justify-self: center;
+    justify-items: center;
+}
+
+a{
+    list-style: none;
+    text-decoration: none;
+}
