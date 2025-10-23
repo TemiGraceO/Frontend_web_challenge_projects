@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: white;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: corbel;
+}
+.up{
+    background: url('images/image.png');
+}
+header{
+    display: flex;
+    gap:40%;
+    justify-content: center;
+    padding-top: 1.5%;
+    padding-bottom: 1.4%;
+}
+li{
+    list-style: none;
+}
+nav{
+    background: linear-gradient(30deg,aqua, navy,blue,aqua);
+    padding: 1px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+    padding-right: 121%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    display: flex;
+    gap: 30%;
+    background-color: #333;
+    padding-right: 100.5%;
+    padding-left: 20%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    width: 100% ;
+    border-radius: 10px;
+    color: white;
+}
+.topmid{
+    padding-top: .4%;
+    margin-left: -20%;
+}
+.topRight{
+    padding-top: .3%;
+}
+.pic{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    font-size: 150%;
+    width: 100%;
+    padding-top: 8%;
+}
+.right{
+    margin-top: 20%;
+    margin-left: 70%;
+    position: absolute;
+}
+.left{
+    position: absolute;
+    margin-left: 10%;
+    width: 100%;
+    margin-top: 4%;
+}
+.img1{
+    margin-left: -14%;
+    display: flex;
+    width: 40%;
+}
+.left2{
+    margin-top:5%;
+}
+.an1{
+    width: 3%;
+    margin-left: 9.5%;
+}
+.an2{
+    transform: rotate(250deg);
+    transform-origin: left;
+    width: 29%;
+}
+.stroke{
+    margin-left: 22%;
+    position: absolute;
+    margin-top: 7%;
+}
+.a{
+    margin-left: 8%;
+    position: absolute;
+    border: 1px solid #17c3b2;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgb(43, 162, 236);
+    background: linear-gradient(90deg, #0b1624 0%, #000000 100%);
+
+}
+.b{
+    position: absolute;
+    margin-top: 12%;
+    border: 1px solid rgb(43, 162, 236);
+    border-radius: 70%;
+    background: linear-gradient(90deg, #0b1624 0%, #000000 90%);
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    box-shadow: 0 0 5px 1px rgb(43, 162, 236);
+    margin-left: -2%;
+}
+.abt{
+    padding-top: 3%;
+    height:75vh;
+    color: #eee;
+    display: flex;
+    gap: 40%;
+    text-shadow: 0 0 5px rgba(255, 255, 2555, 0.2);
+    background: linear-gradient(30deg, #0b1624 0%, #000000 100%);
+}
+.img2{
+    margin-left: 10%;
+    margin-top: 3%;
+}
+.abt1{
+    margin-right: 5%;
+}
+.right1{
+    margin-top: 5%;
+}
+.btn{
+    background-color: rgb(43, 162, 236);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 10px;
+    border: 1px solid aqua;
+    color: navy;
+}
+.btn1{
+    background-color: rgb(43, 162, 236);
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    border-radius: 10px;
+    border: 1px solid aqua;
+    color: navy;
+}
+.experience{
+    background-color: #0b1624;
+    padding-top: 2%;
+    padding-bottom: 4%;
+ 
+}
+.experience-grid{
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    grid-auto-rows: 150px;
+    gap: 15px;
+    width: 70%;
+    justify-self: center;
+    margin-top: 3%;
+}
+.card{
+    background: #1a1a1a;
+    color: #eee;
+    padding: 7%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(43, 162, 236);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.small{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.medium{
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.large{
+    grid-column: span 3;
+    grid-row: span 1;
+}
+.tall{
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.contact{
+    background: linear-gradient(30deg, #0b1624 0%, #000000 50%, #0b1624);
+    padding-top: 2%;
+    justify-items: center;
+    padding-bottom: 2%;
+}
+
+form{
+    width: 40%;
+    margin-top: 3%;
+}
+.contact form input, .contact form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius:5px ;
+    font-size: 16px;
+}
+.contact form button{
+    align-self: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(43, 162, 236);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 10px;
+    border: 1px solid aqua;
+    color: navy;
+}
+.social-icons{
+    justify-content: center;
+    display: flex;
+    margin-top: 2%;
+    gap: 2%;
+}
+.footer{
+    background-color: #182f4d;
+    padding-top: 1.5%;
+}
+
+.up1{
+    display: flex;
+    gap: 4%;
+    justify-content: center;
+    padding-bottom: 1%;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+}
