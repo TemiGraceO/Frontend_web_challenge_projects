@@ -3,22 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="game.css">
 </head>
+
 <body>
-    <h1>Rock. Paper. Scissors.</h1>
-    <img src="images/fist.png" alt="rock" width="200px" height="200px" class="fist">
-    <img src="images/paper.png" alt="paper" width="250px" class="paper">
-    <img src="images/scissors.png" alt="scissors" width="200px" height="200px" class="scissors"><br>
-    <button class="btn"><a href="main.html" style="text-decoration: none; color: white;">START GAME</a></button>
-    <div class="added"><p>⚙️</p><p onclick="pop()" class="question">❓</p>
-    <div id="sideNote" class="hidden" style="display: none;">
-        <p>Rock Vs Paper - Paper Wins</p>
-        <p>Rock Vs Scissors - Rock Wins</p>
-        <p>Paper Vs Scissors - Scissors Wins</p><br>
-<button id="closenote">Close</button>
-  </div>
-</divscript src="main.js"></script>
+    <div class="container">
+        <h1>Rock • Paper • Scissors</h1>
+
+        <div class="images">
+            <img src="images/fist.png" alt="rock" class="fist">
+            <img src="images/paper.png" alt="paper" class="paper">
+            <img src="images/scissors.png" alt="scissors" class="scissors">
+        </div>
+
+        <a href="main.html" class="btn">START GAME</a>
+
+        <div class="added">
+            <p>⚙️</p>
+            <p class="question" onclick="openNote()">❓</p>
+        </div>
+
+        <!-- Popup Note -->
+        <div id="sideNote" class="popup">
+            <div class="popup-content">
+                <h2>Game Rules</h2>
+                <p>Rock vs Paper → <strong>Paper Wins</strong></p>
+                <p>Rock vs Scissors → <strong>Rock Wins</strong></p>
+                <p>Paper vs Scissors → <strong>Scissors Wins</strong></p>
+
+                <button id="closenote" onclick="closeNote()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openNote() {
+            document.getElementById("sideNote").classList.add("show");
+        }
+        function closeNote() {
+            document.getElementById("sideNote").classList.remove("show");
+        }
+    </script>
+
 </body>
 </html>

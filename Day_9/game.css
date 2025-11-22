@@ -1,110 +1,160 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url('images/bg.jpeg');
     background-size: cover;
-    justify-self: center;
-    margin-top: 5%;
-    overflow-y: hidden;
-    font-family:Bahnschrift;
+    background-position: center;
+    font-family: Bahnschrift, sans-serif;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-h1{
-    margin-left: 7%;
-    font-size: 400%;
+.container {
     text-align: center;
     width: 100%;
-    background: linear-gradient(30deg,rgb(255, 255, 255),aqua,blue,rgb(76, 0, 255));
-    background-size: 100%;
-    background-clip: text;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(30deg, white, aqua, blue, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.added{
+
+.images {
     display: flex;
-    margin-left: 40%;
-    gap: 20%;
-    margin-top: 3%;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
-.fist{
+.images img {
+    width: 180px;
+    height: auto;
+}
+
+/* Animations */
+.fist {
     animation: jump 1s infinite ease-in-out;
 }
- @keyframes jump {
-      0%, 100% {
-        transform: translateY(0); /* Start and end at the original position */
-      }
-      50% {
-        transform: translateY(-50px); /* Move up by 50px */
-    }
+
+@keyframes jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-35px); }
 }
 
-.paper{
+.paper {
     animation: side 1s infinite ease-in-out;
 }
- @keyframes side {
-      0%, 100% {
-        transform: translatex(0); /* Start and end at the original position */
-      }
-      50% {
-        transform: translatex(-50px); /* Move up by 50px */
-    }
+
+@keyframes side {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-35px); }
 }
 
-.scissors{
+.scissors {
     animation: tilt 1s infinite ease-in-out;
 }
- @keyframes tilt {
-      0%,100%{
-        transform: rotate(90deg); /* Start and end at the original position */
-      }
-    50%{
-        transform: rotate(0deg); /* Start and end at the original position */
-    }
+
+@keyframes tilt {
+    0%, 100% { transform: rotate(90deg); }
+    50% { transform: rotate(0deg); }
 }
 
-.btn{
-    background-color: orange; 
-    border-radius: 2px; 
-    width: 20%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    color: white; 
-    margin-left: 40%;
-    border-radius: 12%;
-}
-
-.btn:hover{
-    background-color: rgb(255, 140, 0);
-    cursor: pointer;
-}
-
-.question:hover{
-    cursor: pointer;
-}
-.hidden{
-    background:url('images/bg.jpeg');
-    color: white;
-    padding-left:6%;
-    padding-right: 6%;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    margin-top: -15%;
-    border-radius: 4%;
-}
-
-#closenote{
-    margin-left: 30%;
+/* Button */
+.btn {
+    display: inline-block;
     background-color: orange;
-    width: 40%;
-    padding-top: 2%;
-    padding-bottom: 2%;
     color: white;
+    padding: 15px 35px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    margin-top: 20px;
 }
-#closenote:hover{
+
+.btn:hover {
     background-color: rgb(255, 140, 0);
+}
+
+/* Icons */
+.added {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.question:hover {
     cursor: pointer;
+}
+
+/* Popup */
+.hidden {
+    display: none;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(6px);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#closenote {
+    background-color: orange;
+    padding: 10px 25px;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#closenote:hover {
+    background-color: rgb(255, 140, 0);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 900px) {
+    h1 { font-size: 2.6rem; }
+    .images img { width: 150px; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.1rem; }
+    .images img { width: 130px; }
+    .btn { width: 70%; font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.7rem; }
+    
+    .images {
+        flex-direction: column;
+        gap: 20px;
+        width: 300px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .images img { width: 120px; }
+
+    .added { font-size: 1.6rem; }
+    .container{margin-top: 15%;}
 }
