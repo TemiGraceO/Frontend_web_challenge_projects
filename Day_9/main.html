@@ -6,25 +6,40 @@
     <title>Game</title>
     <link rel="stylesheet" href="main.css">
 </head>
-<body style="margin-top: 15%;"><div class="img">
-     <img src="images/fist.png" alt="rock" width="200px" height="200px" class="fist" onclick="play('rock')" id="choice">
-    <img src="images/paper.png" alt="paper" width="250px" class="paper" onclick="play('paper')" id="choice">
-    <img src="images/scissors.png" alt="scissors" width="200px" height="200px" class="scissors" onclick="play('scissors')" id="choice"><br>
-</div>
-    <div class="side">
-        <h3>How To Play</h3><br>
-        <ol style="list-style: none;">
-            <li>Choose what to play</li>
-            <li>Computer Plays too</li>
-        </ol>
-    </div>
 
-    <div class="score">
-        <h3  id="score">Player: 0 | Computer: 0</h3>
-        <p id="result">Make your move!</p>
+<body>
+
+    <div class="game-wrapper">
+        <h1>Rock • Paper • Scissors</h1>
+
+        <!-- Player Choices -->
+        <div class="choices">
+            <img src="images/fist.png" alt="rock" class="choice fist" onclick="play('rock')">
+            <img src="images/paper.png" alt="paper" class="choice paper" onclick="play('paper')">
+            <img src="images/scissors.png" alt="scissors" class="choice scissors" onclick="play('scissors')">
+        </div>
+
+        <!-- How to Play -->
+        <aside class="side">
+            <h3>How To Play</h3>
+            <ol>
+                <li>Choose what to play</li>
+                <li>Computer plays too</li>
+            </ol>
+        </aside>
+
+        <!-- Scoreboard -->
+        <div class="score">
+            <h3 id="score">Player: 0 | Computer: 0</h3>
+            <p id="result">Make your move!</p>
+        </div>
+
     </div>
+    <div class="quit"><a href="index.html"><button>Quit</button></a></div>
 
     <footer>Copyright Gracie</footer>
+
     <script src="main.js"></script>
+
 </body>
 </html>
